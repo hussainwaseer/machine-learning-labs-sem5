@@ -40,3 +40,8 @@ model = LinearRegression()
 model.fit(xTrain,yTrain)
 print(xTrain.shape)
 print(xTest.shape)
+
+ypred = model.predict(xTest)
+yActual = yTest.iloc[:10].values
+print("Actual prices: ",yActual)
+print("predicted prices: ",ypred[:10])
