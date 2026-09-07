@@ -33,3 +33,10 @@ X = pd.get_dummies(X, columns=['Neighborhood', 'HouseStyle'], drop_first=True)
 print(X.isnull())
 
 print(X.shape)
+
+xTrain , xTest , yTrain , yTest = train_test_split(X,Y,test_size=0.20, random_state=42)
+
+model = LinearRegression()
+model.fit(xTrain,yTrain)
+print(xTrain.shape)
+print(xTest.shape)
